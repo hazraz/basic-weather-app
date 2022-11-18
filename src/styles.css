@@ -110,3 +110,9 @@ body {
   margin-bottom: -30px;
   padding-left: 60px;
 }
+
+.code-reference {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+}
