@@ -1,0 +1,112 @@
+body {
+  font-family: monospace;
+  color: #286070;
+}
+
+.card {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.current-day {
+  margin-top: -20px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.current-time {
+  text-align: center;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.current-temperature {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -30px;
+  padding-right: 35px;
+}
+
+.search-bar {
+  text-align: left;
+  padding-top: 10px;
+  margin-top: -5px;
+}
+
+.btn-light {
+  color: #fff;
+  background-color: #f78820;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  width: 50%;
+}
+
+#current-description {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+}
+
+#current-city {
+  color: #177070;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+#current-humidity,
+#current-wind {
+  color: #177070;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+#humidity,
+#wind {
+  color: #177070;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.upcoming-forecast {
+  font-size: 20px;
+  text-decoration: underline;
+  padding-left: 5px;
+  padding-top: 15px;
+  line-height: 22px;
+}
+
+.future-forecast {
+  font-size: 15px;
+  text-align: center;
+}
+
+.card-background {
+  background: #f78820;
+  color: #fff;
+}
+
+.current-box {
+  background-color: #fff;
+  color: #177070;
+}
+
+.search-box {
+  background-color: #fff;
+}
+
+.stats-box {
+  background-color: #ffffff;
+}
+
+.upcoming-box {
+  background-color: #fff;
+  color: #f78820;
+}
+
+.unit {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: -30px;
+  padding-left: 60px;
+}
