@@ -114,5 +114,6 @@ body {
 #code-reference {
   text-align: center;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 16px;
+  padding-top: 30px;
 }
