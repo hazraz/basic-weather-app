@@ -45,11 +45,18 @@ function displayWeatherCondition(response) {
 
   document.querySelector("#current-description").innerHTML =
     response.data.weather[0].description;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(event) {
   event.preventDefault();
-  //let cityElement = document.querySelector("#current-city");
+  let cityElement = document.querySelector("#current-city");
   //let cityInput = document.querySelector("#city-input");
   //cityElement.innerHTML = `City: ${cityInput.value}`;
   let apiKey = "1de37dc30f66e70273aa13be24d80477";
