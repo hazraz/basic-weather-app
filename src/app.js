@@ -52,6 +52,8 @@ function displayWeatherCondition(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsciusTemperature = response.data.main.temp;
 }
 
 function search(event) {
@@ -69,22 +71,27 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-//let farenheitLink = document.querySelector("#fahrenheit-link");
-//farenheitLink.addEventListener("click", convertToFahrenheit);
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  celciusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
 
-//let celciusLink = document.querySelector("#celcius-link");
-//celciusLink.addEventListener("click", convertToCelcius);
+function convertToCelcius(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(celsciusTemperature);
+}
 
-// function convertToFahrenheit(event) {
-//event.preventDefault();
-//let temperatureElement = document.querySelector("#current-temperature");
-//let temperature = temperatureElement.innerHTML;
-//temperatureElement.innerHTML = 61;
-//}
+let celsciusTemperature = null;
 
-// function convertToCelcius(event) {
-//event.preventDefault();
-//let temperatureElement = document.querySelector("#current-temperature");
-//let temperature = temperatureElement.innerHTML;
-//temperatureElement.innerHTML = 16;
-//}
+let farenheitLink = document.querySelector("#fahrenheit-link");
+farenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", convertToCelcius);
